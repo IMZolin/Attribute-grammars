@@ -79,8 +79,8 @@ def __GetRCode(node):
 
 
 parser = ArgumentParser(prog="create_ast", description="Create AST")
-parser.add_argument("-c", "--code", dest="codeFile", help="File with code", metavar="FILE", required=True)
-parser.add_argument("-j", "--json", dest="jsonFile", help="Json file with settings", metavar="FILE", required=True)
+parser.add_argument("-c", "--code", dest="codeFile", help="File with code", default="_examples/expression/example.txt", metavar="FILE", required=False)
+parser.add_argument("-j", "--json", dest="jsonFile", help="Json file with settings", default="_examples/expression/expression.json", metavar="FILE", required=False)
 args = parser.parse_args()
 
 with open(args.jsonFile, 'r') as jsonFile:
